@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.2.min.js" integrity="sha384-ufR9RFnRs6lniiaFvtJziE0YeidtAgBRH6ux2oUItHw5WTvE1zuk9uzhUU/FJXDp" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="0e743b66-6e2a-4851-8ad5-7bbf8a02e188" data-root-id="4641"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="4758">
+          {"58d40319-7d60-460d-93ee-e546634a500b":{"roots":{"references":[{"attributes":{},"id":"4657","type":"BasicTicker"},{"attributes":{},"id":"4648","type":"LinearScale"},{"attributes":{"axis":{"id":"4652"},"grid_line_color":null,"ticker":null},"id":"4655","type":"Grid"},{"attributes":{},"id":"4660","type":"PanTool"},{"attributes":{},"id":"4687","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"4656"},"dimension":1,"ticker":null},"id":"4659","type":"Grid"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"4660"},{"id":"4661"},{"id":"4662"},{"id":"4663"},{"id":"4664"},{"id":"4665"},{"id":"4679"}]},"id":"4667","type":"Toolbar"},{"attributes":{},"id":"4661","type":"WheelZoomTool"},{"attributes":{},"id":"4665","type":"HelpTool"},{"attributes":{"overlay":{"id":"4666"}},"id":"4662","type":"BoxZoomTool"},{"attributes":{},"id":"4663","type":"SaveTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"mortes_dia"},"width":{"value":60000000},"x":{"field":"datas"}},"id":"4676","type":"VBar"},{"attributes":{},"id":"4664","type":"ResetTool"},{"attributes":{"source":{"id":"4640"}},"id":"4678","type":"CDSView"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"mortes_dia"},"width":{"value":60000000},"x":{"field":"datas"}},"id":"4675","type":"VBar"},{"attributes":{"days":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]},"id":"4683","type":"DaysTicker"},{"attributes":{"data_source":{"id":"4640"},"glyph":{"id":"4675"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"4676"},"selection_glyph":null,"view":{"id":"4678"}},"id":"4677","type":"GlyphRenderer"},{"attributes":{"code":"\n            let date = new Date(tick)\n            let day = date.getUTCDate(date)\n            let month = date.getUTCMonth(date)\n            let r = day + \"/\" + month\n            if ( day%5 == 0 ) { return r }\n            else { return \"\" }\n        "},"id":"4685","type":"FuncTickFormatter"},{"attributes":{"data":{"datas":[1584835200000.0,1584921600000.0,1585008000000.0,1585094400000.0,1585180800000.0,1585267200000.0,1585353600000.0,1585440000000.0,1585526400000.0,1585612800000.0,1585699200000.0,1585785600000.0,1585872000000.0,1585958400000.0,1586044800000.0,1586131200000.0,1586217600000.0,1586304000000.0,1586390400000.0,1586476800000.0,1586563200000.0,1586649600000.0,1586736000000.0,1586822400000.0,1586908800000.0,1586995200000.0,1587081600000.0,1587168000000.0,1587254400000.0,1587340800000.0,1587427200000.0,1587513600000.0,1587600000000.0,1587686400000.0,1587772800000.0,1587859200000.0,1587945600000.0,1588032000000.0,1588118400000.0,1588204800000.0,1588291200000.0,1588377600000.0,1588464000000.0,1588550400000.0,1588636800000.0,1588723200000.0,1588809600000.0,1588896000000.0,1588982400000.0,1589068800000.0,1589155200000.0,1589241600000.0,1589328000000.0,1589414400000.0,1589500800000.0,1589587200000.0,1589673600000.0,1589760000000.0,1589846400000.0,1589932800000.0,1590019200000.0,1590105600000.0,1590192000000.0,1590278400000.0,1590364800000.0,1590451200000.0,1590537600000.0],"mortes_dia":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2412779819123548,0.4825559638247096,0.4825559638247096,0.7238339457370644,0.7238339457370644,0.9651119276494192,1.206389909561774,1.4476678914741288,1.4476678914741288,1.6889458733864837,1.6889458733864837,2.412779819123548,2.654057801035903,2.8953357829482576,3.3778917467729674,3.619169728685322,4.101725692510032,3.860447710597677,3.619169728685322,3.3778917467729674,3.860447710597677,3.860447710597677,4.343003674422387,4.101725692510032,4.584281656334741,5.549393583984161,6.03194954780887,6.51450551163358,7.720895421195354,7.479617439282999,8.444729366932417,9.168563312669482,10.374953222231257,12.787733041354805,13.02901102326716,13.752844969004224,15.924346806215418,15.683068824303062,15.441790842390708,15.441790842390708,13.994122950916578,14.717956896653643,15.683068824303062,14.235400932828933,13.994122950916578,13.752844969004224,13.51156698709187,13.752844969004224,13.270289005179514,11.58134313179303,12.787733041354805,11.822621113705384,12.06389909561774,12.546455059442449,11.340065149880676]},"selected":{"id":"4690"},"selection_policy":{"id":"4689"}},"id":"4640","type":"ColumnDataSource"},{"attributes":{"below":[{"id":"4652"}],"center":[{"id":"4655"},{"id":"4659"}],"left":[{"id":"4656"}],"outline_line_color":null,"plot_width":1200,"renderers":[{"id":"4677"}],"title":{"id":"4642"},"toolbar":{"id":"4667"},"x_range":{"id":"4644"},"x_scale":{"id":"4648"},"y_range":{"id":"4646"},"y_scale":{"id":"4650"}},"id":"4641","subtype":"Figure","type":"Plot"},{"attributes":{"callback":null,"formatters":{"@datas":"datetime"},"mode":"vline","tooltips":[["Mes/Dia","@datas{%d/%m}"],["Obitos","@mortes_dia"]]},"id":"4679","type":"HoverTool"},{"attributes":{},"id":"4689","type":"UnionRenderers"},{"attributes":{"axis_label":"Data","formatter":{"id":"4685"},"major_label_orientation":1,"minor_tick_line_color":null,"ticker":{"id":"4683"}},"id":"4652","type":"DatetimeAxis"},{"attributes":{},"id":"4644","type":"DataRange1d"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"4666","type":"BoxAnnotation"},{"attributes":{"text":"Medias M\u00f3veis dos \u00daltimos Sete Dias da Quantidade \u00d3bitos"},"id":"4642","type":"Title"},{"attributes":{},"id":"4650","type":"LinearScale"},{"attributes":{},"id":"4690","type":"Selection"},{"attributes":{"start":0},"id":"4646","type":"DataRange1d"},{"attributes":{"axis_label":"\u00d3bitos","formatter":{"id":"4687"},"minor_tick_line_color":null,"ticker":{"id":"4657"}},"id":"4656","type":"LinearAxis"}],"root_ids":["4641"]},"title":"Bokeh Application","version":"2.0.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('4758').textContent;
+                  var render_items = [{"docid":"58d40319-7d60-460d-93ee-e546634a500b","root_ids":["4641"],"roots":{"4641":"0e743b66-6e2a-4851-8ad5-7bbf8a02e188"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

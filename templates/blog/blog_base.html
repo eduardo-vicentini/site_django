@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eduardo Vicentini</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    </head>
+
+    <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="{% url 'blog' %}">Mediumcre</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contato</a>
+                </li>
+              </ul>
+         
+            </div>
+        </nav>
+      </header>
+
+      <main>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+      </main>
+
+      <footer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="mx-auto">
+                <a href="https://www.linkedin.com/in/eduardo-vicentini-4ab081192/" class="navbar-brand"><ion-icon name="logo-linkedin" size="large"></a>
+                <a href="https://github.com/eduardo-vicentini" class="navbar-brand"><ion-icon name="logo-github" size="large"></a>
+                <a href="{% url 'contact' %}" class="navbar-brand"><ion-icon name="mail-outline" size="large"></ion-icon></a>edudiasvicentini@hotmail.com
+            </div>
+            
+        </nav>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+      </footer>
+    </body>
+</html>

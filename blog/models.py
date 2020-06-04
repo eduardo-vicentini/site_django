@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from imagekit.models import ImageSpecField
+from pilkit.processors import ResizeToFill
 
 STATUS = (
     (0, "Draft"),

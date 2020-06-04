@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.2.min.js" integrity="sha384-ufR9RFnRs6lniiaFvtJziE0YeidtAgBRH6ux2oUItHw5WTvE1zuk9uzhUU/FJXDp" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="d22d962b-eab5-4d64-ab39-1e7d6bea374e" data-root-id="7259"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="7376">
+          {"9914f88c-9b55-4579-9bcf-2ff5c9bc11ec":{"roots":{"references":[{"attributes":{"axis_label":"Data","formatter":{"id":"7303"},"major_label_orientation":1,"minor_tick_line_color":null,"ticker":{"id":"7301"}},"id":"7270","type":"DatetimeAxis"},{"attributes":{},"id":"7308","type":"Selection"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"mortes_dia"},"width":{"value":60000000},"x":{"field":"datas"}},"id":"7294","type":"VBar"},{"attributes":{"callback":null,"formatters":{"@datas":"datetime"},"mode":"vline","tooltips":[["Mes/Dia","@datas{%d/%m}"],["Obitos","@mortes_dia"]]},"id":"7297","type":"HoverTool"},{"attributes":{"source":{"id":"7258"}},"id":"7296","type":"CDSView"},{"attributes":{},"id":"7305","type":"BasicTickFormatter"},{"attributes":{},"id":"7307","type":"UnionRenderers"},{"attributes":{"text":"Medias M\u00f3veis dos \u00daltimos Sete Dias da Quantidade \u00d3bitos"},"id":"7260","type":"Title"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"7284","type":"BoxAnnotation"},{"attributes":{"axis":{"id":"7274"},"dimension":1,"ticker":null},"id":"7277","type":"Grid"},{"attributes":{},"id":"7281","type":"SaveTool"},{"attributes":{"code":"\n            let date = new Date(tick)\n            let day = date.getUTCDate(date)\n            let month = date.getUTCMonth(date)\n            let r = day + \"/\" + month\n            if ( day%5 == 0 ) { return r }\n            else { return \"\" }\n        "},"id":"7303","type":"FuncTickFormatter"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"7278"},{"id":"7279"},{"id":"7280"},{"id":"7281"},{"id":"7282"},{"id":"7283"},{"id":"7297"}]},"id":"7285","type":"Toolbar"},{"attributes":{},"id":"7268","type":"LinearScale"},{"attributes":{},"id":"7266","type":"LinearScale"},{"attributes":{},"id":"7262","type":"DataRange1d"},{"attributes":{"axis":{"id":"7270"},"grid_line_color":null,"ticker":null},"id":"7273","type":"Grid"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"mortes_dia"},"width":{"value":60000000},"x":{"field":"datas"}},"id":"7293","type":"VBar"},{"attributes":{"days":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]},"id":"7301","type":"DaysTicker"},{"attributes":{"overlay":{"id":"7284"}},"id":"7280","type":"BoxZoomTool"},{"attributes":{},"id":"7283","type":"HelpTool"},{"attributes":{"below":[{"id":"7270"}],"center":[{"id":"7273"},{"id":"7277"}],"left":[{"id":"7274"}],"outline_line_color":null,"plot_width":1200,"renderers":[{"id":"7295"}],"title":{"id":"7260"},"toolbar":{"id":"7285"},"x_range":{"id":"7262"},"x_scale":{"id":"7266"},"y_range":{"id":"7264"},"y_scale":{"id":"7268"}},"id":"7259","subtype":"Figure","type":"Plot"},{"attributes":{"data":{"datas":[1585180800000.0,1585267200000.0,1585353600000.0,1585440000000.0,1585526400000.0,1585612800000.0,1585699200000.0,1585785600000.0,1585872000000.0,1585958400000.0,1586044800000.0,1586131200000.0,1586217600000.0,1586304000000.0,1586390400000.0,1586476800000.0,1586563200000.0,1586649600000.0,1586736000000.0,1586822400000.0,1586908800000.0,1586995200000.0,1587081600000.0,1587168000000.0,1587254400000.0,1587340800000.0,1587427200000.0,1587513600000.0,1587600000000.0,1587686400000.0,1587772800000.0,1587859200000.0,1587945600000.0,1588032000000.0,1588118400000.0,1588204800000.0,1588291200000.0,1588377600000.0,1588464000000.0,1588550400000.0,1588636800000.0,1588723200000.0,1588809600000.0,1588896000000.0,1588982400000.0,1589068800000.0,1589155200000.0,1589241600000.0,1589328000000.0,1589414400000.0,1589500800000.0,1589587200000.0,1589673600000.0,1589760000000.0,1589846400000.0,1589932800000.0,1590019200000.0,1590105600000.0,1590192000000.0,1590278400000.0,1590364800000.0,1590451200000.0,1590537600000.0],"mortes_dia":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.24887217352761623,0.24887217352761623,0.24887217352761623,0.0,0.24887217352761623,0.24887217352761623,0.24887217352761623,0.24887217352761623,0.24887217352761623,0.49774434705523246,0.49774434705523246,0.49774434705523246,0.49774434705523246,0.49774434705523246,0.49774434705523246,0.7466165205828487,0.49774434705523246,0.7466165205828487,0.49774434705523246,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.7466165205828487,0.9954886941104649,0.9954886941104649,0.9954886941104649,1.2443608676380813,1.2443608676380813,1.4932330411656973,1.7421052146933136,1.7421052146933136,1.9909773882209298,2.2398495617485463,2.4887217352761626,2.2398495617485463,1.9909773882209298,1.9909773882209298,1.9909773882209298,1.9909773882209298,2.4887217352761626,2.2398495617485463,2.4887217352761626,2.9864660823313947,2.737593908803779,2.737593908803779,2.737593908803779,2.4887217352761626,2.4887217352761626,2.4887217352761626]},"selected":{"id":"7308"},"selection_policy":{"id":"7307"}},"id":"7258","type":"ColumnDataSource"},{"attributes":{},"id":"7279","type":"WheelZoomTool"},{"attributes":{"start":0},"id":"7264","type":"DataRange1d"},{"attributes":{"axis_label":"\u00d3bitos","formatter":{"id":"7305"},"minor_tick_line_color":null,"ticker":{"id":"7275"}},"id":"7274","type":"LinearAxis"},{"attributes":{},"id":"7275","type":"BasicTicker"},{"attributes":{},"id":"7282","type":"ResetTool"},{"attributes":{"data_source":{"id":"7258"},"glyph":{"id":"7293"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"7294"},"selection_glyph":null,"view":{"id":"7296"}},"id":"7295","type":"GlyphRenderer"},{"attributes":{},"id":"7278","type":"PanTool"}],"root_ids":["7259"]},"title":"Bokeh Application","version":"2.0.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('7376').textContent;
+                  var render_items = [{"docid":"9914f88c-9b55-4579-9bcf-2ff5c9bc11ec","root_ids":["7259"],"roots":{"7259":"d22d962b-eab5-4d64-ab39-1e7d6bea374e"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

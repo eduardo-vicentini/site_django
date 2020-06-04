@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% block content %}
+<style>
+    img.resize {
+  max-width:15%;
+  max-height:15%;
+}
+
+</style>
+{% load static %}
+<center>
+    <img src="{% static 'img/eduardo.jpg' %}" class="rounded-circle resize mx-auto" id="retrato" alt="Foto do Eduardo">
+</center>
+
+
+{% endblock %}

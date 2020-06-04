@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<style>
+    .container {
+        margin-top: 5em;
+    }
+    button {
+        width: 100%;
+        margin-top: 2em;
+    }
+</style>
+
+  <div class="container">
+    <form accept-charset="utf-8" action="https://formspree.io/edudiasvicentini@hotmail.com" method="post">
+        <fieldset id="fs-frm-inputs">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+
+                    <div class="form-row">
+                        <label for="full-name">Nome</label>
+                        <input type="text" class="form-control" id="full-name" placeholder="Nome" required="">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="email-address">Endereço de e-mail</label>
+                        <input type="email" name="_replyto" class="form-control" id="email-address" placeholder="nome@exemplo.com" required="">    
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-dark">Enviar</button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="message">Mensagem</label>
+                    <textarea class="form-control" name="message" id="message" rows="7"></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Website">
+                    
+                </div>
+               
+            </div>
+        </fieldset>
+    </form> 
+  </div>
+
+
+{%endblock%}
