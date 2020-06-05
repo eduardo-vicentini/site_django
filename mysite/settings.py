@@ -18,6 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES_DIR_BLOG = os.path.join(TEMPLATES_DIR, 'blog')
 TEMPLATES_DIR_COVID19 = os.path.join(TEMPLATES_DIR, 'covid19')
+TEMPLATES_DIR_PROJECTS = os.path.join(TEMPLATES_DIR, 'projects')
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +28,7 @@ TEMPLATES_DIR_COVID19 = os.path.join(TEMPLATES_DIR, 'covid19')
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'covid19',
+    'projects',
 ]
 
 INSTALLED_APPS += ('django_summernote', ) 
@@ -62,7 +64,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR, TEMPLATES_DIR_BLOG, TEMPLATES_DIR_COVID19],
+        'DIRS': [TEMPLATES_DIR, TEMPLATES_DIR_BLOG, TEMPLATES_DIR_COVID19, TEMPLATES_DIR_PROJECTS,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -26,6 +26,7 @@ urlpatterns = [
     path('mediumcre/', include('blog.urls')),
     path('covid19/', include('covid19.urls')),
     path('summernote/', include('django_summernote.urls')),
+    path('projects/', include('projects.urls')),
 ]
 
 if settings.DEBUG:

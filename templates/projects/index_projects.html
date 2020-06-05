@@ -1,0 +1,62 @@
+{% extends "base.html" %} 
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #fdfdfd;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+
+    img.resize {
+        max-width:15%;
+        max-height:15%;
+    }
+</style>
+
+
+{% load static %}
+
+
+<div class="d-flex flex-row justify-content-center">
+{% for project in project_list %}
+    <div class="card mb-3" style="max-width: 100vh;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{% static project.img_src %}" class="card-img" alt="Um projeto">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    <a href="{{ project.url }}" class="btn btn-dark">Veja</a>
+                    <p class="card-text"><small class="text-muted">{{ project.created_on }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+
+{% if is_paginated %}
+  <nav aria-label="Page navigation conatiner"></nav>
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+    {% endif %}
+  </ul>
+  </nav>
+</div>
+{% endif %}
+
+{%endblock%}
