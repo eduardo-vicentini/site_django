@@ -1,21 +1,6 @@
 {% extends "blog_base.html" %} 
 {% block content %}
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        background-color: #fdfdfd;
-    }
-    
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
 
-    img.resize {
-        max-width:15%;
-        max-height:15%;
-    }
-</style>
 
 
 {% load static %}
@@ -28,7 +13,7 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="d-flex flex-row justify-content-center">
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
             {% for post in post_list %}
@@ -43,7 +28,7 @@
             </div>
             {% endfor %}
         </div>
-        {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        
     </div>
 </div>
 
